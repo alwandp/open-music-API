@@ -32,6 +32,20 @@ class SongsService {
     return result.rows;
   }
 
+  // async getSongsByTitle(title) {
+  //   const query = {
+  //     text: 'SELECT * FROM songs WHERE title LIKE $1',
+  //     values: [`%${title}`],
+  //   };
+  //   const result = await this._pool.query(query);
+
+  //   if (!result.rows.length) {
+  //     throw new NotFoundError('Lagu tidak ditemukan');
+  //   }
+
+  //   return result.rows.map(mapSongsDBToModel);
+  // }
+
   async getSongById(id) {
     const query = {
       text: 'SELECT * FROM songs WHERE id = $1',
