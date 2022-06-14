@@ -16,6 +16,18 @@ const mapSongsDBToModel = ({
   albumId: album_id,
 });
 
+const mapAlbumsDBToModel = ({
+  id,
+  name,
+  year,
+  cover,
+}) => ({
+  id,
+  name,
+  year,
+  coverUrl: cover,
+});
+
 const mapPlaylistSongsDBToModel = ({
   id,
   playlist_id,
@@ -26,4 +38,4 @@ const mapPlaylistSongsDBToModel = ({
   songId: song_id,
 });
 
-module.exports = { mapSongsDBToModel, mapPlaylistSongsDBToModel };
+module.exports = { mapSongsDBToModel, mapPlaylistSongsDBToModel, mapAlbumsDBToModel };
